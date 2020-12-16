@@ -12,5 +12,12 @@
         "byron dunkley",
         "byron",
         "leigh"
-    ]
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "repository": "KamonLeigh/leigh",
+    "author": {
+        "name": "Byron Dunkley",
+        "email": "byronleigh80@gmail.com"
+    }
 }
