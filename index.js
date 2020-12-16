@@ -2,15 +2,20 @@
 
 const welcome = require('cli-welcome');
 const pkgJSON = require('./package.json');
+const chalk = require('chalk');
+const log = console.log;
+const githubColour = chalk.hex(`#6cc644`).bold.inverse
+const dim = chalk.dim;
+const italic = chalk.italic
 
 
 
 welcome({
-    title: pkgJSON.name,
+    title: `Byron Dunkley`,
     tagLine: `Nice to meet you!`,
     description: pkgJSON.description,
     version: pkgJSON.version,
-    bgColor: `#FADC00`,
+    bgColor: `#6937ff`,
     color: `#000000`,
     clear: true,
     bold: true
@@ -18,14 +23,12 @@ welcome({
 
 
 
-console.log(`
+log(`
     Hi!
 
-    Byron Dunkley
+    ${italic(`I am a fullstack developer from London :-)`)}
 
-    I am a fullstack developer from London :-)
-
-    Github: https://github.com/KamonLeigh
+    ${githubColour(` Github `)} ${dim(`https://github.com/KamonLeigh`)}
 `);
 
 //NB chmod +x index.js
