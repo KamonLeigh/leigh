@@ -7,13 +7,15 @@
     },
     "dependencies": {
         "chalk": "^4.1.0",
+        "cli-check-node": "^1.3.4",
         "cli-welcome": "^2.2.2",
         "log-symbols": "^4.0.0"
     },
     "keywords": [
         "byron dunkley",
         "byron",
-        "leigh"
+        "leigh",
+        "node > 10"
     ],
     "license": "MIT",
     "main": "index.js",

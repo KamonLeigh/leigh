@@ -3,6 +3,7 @@
 const welcome = require('cli-welcome');
 const pkgJSON = require('./package.json');
 const chalk = require('chalk');
+const checkNode = require('cli-check-node')
 const log = console.log;
 const githubColour = chalk.hex(`#6cc644`).bold.inverse
 const dim = chalk.dim;
@@ -14,6 +15,8 @@ const success = chalk.green.inverse;
 const info = chalk.blue.inverse;
 const warning = chalk.keyword('orange').inverse;
 const error = chalk.red.bold.inverse;
+
+checkNode('9')
 
 welcome({
     title: `Byron Dunkley`,
