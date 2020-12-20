@@ -3,7 +3,8 @@
 const welcome = require('cli-welcome');
 const pkgJSON = require('./package.json');
 const chalk = require('chalk');
-const checkNode = require('cli-check-node')
+const checkNode = require('cli-check-node');
+const unhandled = require('cli-handle-unhandled');
 const log = console.log;
 const githubColour = chalk.hex(`#6cc644`).bold.inverse
 const dim = chalk.dim;
@@ -17,6 +18,12 @@ const warning = chalk.keyword('orange').inverse;
 const error = chalk.red.bold.inverse;
 
 checkNode('9')
+
+// process.on('unhandledRejection', (err) => {
+//     console.log(`unhandledRejection`, err)
+// })
+
+unhandled();
 
 welcome({
     title: `Byron Dunkley`,
