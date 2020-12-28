@@ -4,19 +4,20 @@ const unhandled = require('cli-handle-unhandled');
 const pkgJSON = require('../package.json');
 
 
-module.exports = () => {
+module.exports = (minimal, clear) => {
     unhandled();
     
-    welcome({
+  !minimal &&  welcome({
         title: `Byron Dunkley`,
         tagLine: `Nice to meet you!`,
         description: pkgJSON.description,
         version: pkgJSON.version,
         bgColor: `#6937ff`,
         color: `#000000`,
-        clear: true,
+        clear,
         bold: true
     });
-    
+ 
+   minimal && console.log(`Byron Dunkley`)
 checkNode('9')
 }
