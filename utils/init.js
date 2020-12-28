@@ -1,6 +1,8 @@
 const welcome = require('cli-welcome');
+const boxen = require('boxen');
 const checkNode = require('cli-check-node');
 const unhandled = require('cli-handle-unhandled');
+
 const pkgJSON = require('../package.json');
 
 
@@ -18,6 +20,6 @@ module.exports = (minimal, clear) => {
         bold: true
     });
  
-   minimal && console.log(`Byron Dunkley`)
+   minimal && console.log(boxen(`Byron Dunkley`, {padding: 1, float: `center`, dimBorder: true}));
 checkNode('9')
 }
