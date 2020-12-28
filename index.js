@@ -9,6 +9,7 @@ const init = require("./utils/init");
 const data = require('./utils/data');
 const cli = require('./utils/cli');
 const debug = require('./utils/debug')
+const stats = require('./utils/stats')
 
 
 const flags = cli.flags;
@@ -17,7 +18,7 @@ const input = cli.input;
 // Alerts
 const sym = require("log-symbols");
 
-(() => {
+(async () => {
   // process.on('unhandledRejection', (err) => {
   //     console.log(`unhandledRejection`, err)
   // })
@@ -34,6 +35,8 @@ const sym = require("log-symbols");
   log(``);
   flags.social && log(`      ${data.social}`)
   
+  // stats
+  await stats()
 
 log(`
     ${sym.success} ${data.successMessage}`);
