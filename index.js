@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-const handleError = require('cli-handle-error');
+
 const alert = require('cli-alerts');
+const {  Confirm } = require('enquirer');
 
 
 const log = console.log;
@@ -26,6 +27,18 @@ const sym = require("log-symbols");
   // })
   init(flags.minimal, flags.clear);
   input.includes('help') && cli.showHelp(0);
+
+  const prompt = new Confirm(
+    {
+     
+      name: 'username',
+      message: 'Do you like node?'
+    }
+  )
+
+  const response = await prompt.run();
+
+  console.log('response', response);
 
 //   const error = new Error(`something went wrong`);
 
