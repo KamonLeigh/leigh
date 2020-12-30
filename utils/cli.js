@@ -14,6 +14,7 @@ const helpText = `
     ${yellow(`--clear`)}                    Clear the console ${dim(`(DEFAULT: true)`)}
     ${yellow(`--no-clear`)}                 Don't clear the console
     ${yellow(`-m`)}, ${yellow(`--minimal`)}              Print minimal information
+    ${yellow(`-p`)}, ${yellow(`--posts`)}                Print last 10 blog posts
     ${yellow(`-d`)}, ${yellow(`--debug`)}                Print debug information
     ${yellow(`-v`)}, ${yellow(`--version`)}              Print CLI version
 
@@ -51,6 +52,10 @@ const options = {
     clear: {
         type: 'boolean',
         default: true
+    },
+    posts: {
+        type: 'boolean',
+        default: false
     }
   }
 }
